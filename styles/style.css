@@ -2,6 +2,10 @@
     --bs-blue: #0d6efd;
 }
 
+.header-nav {
+    z-index: 1;
+}
+
 .main-title {
     font-size: 3rem
 }
