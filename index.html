@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carteiro Digital | Rastreio de encomendas pelo Telegram</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+        <section class="container">
+          <header>
+            <section class="row no-gutters">
+              <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <a class="navbar-brand text-primary" href="#"
+                    >carteiro<span class="fw-bold">digital</span></a
+                  >
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+    
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active text-secondary"
+                          aria-current="page"
+                          href="#"
+                          >Início</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Rastrear</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#"
+                          >Como funciona</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">FAQ</a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          type="button"
+                          class="nav-link btn btn-outline-primary contact-btn"
+                          >Contato</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </section>
+          </header>
+        </section>
+    </header>
+
+    <main>
+        <section class="container">
+          <div class="row home-article" style="min-height: 80vh">
+            <div class="col d-flex align-items-center">
+              <article
+                class="d-flex flex-column justify-content-around justify-center md-justify-content-center"
+                style="height: 50%"
+              >
+                <h1 class="fw-bold text-primary main-title">
+                  Rastrear encomendas pelo Telegram? Agora é possível!
+                </h1>
+                <p class="fw-semi-bold main-sub-title">
+                  Seja notificado sempre que seus pacotes dos correios se
+                  movimentarem, pelo
+                  <span class="fw-bold">carteiro digital</span>. Simples, rápido e
+                  grátis.
+                </p>
+                <div class="col-6">
+                  <a
+                    type="button"
+                    class="btn btn-lg btn-primary text-light shadow"
+                    style="width: 100%"
+                    >Rastrear encomenda</a
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+              <img src="./images/delivery-animate.svg" alt="delivery" style="height: 30rem" />
+            </div>
+          </div>
+        </section>
+    
+        <section class="bg-primary">
+          <div class="container tracking-data" style="min-height: 30vh">
+            <div class="row d-flex align-items-center" style="height: 100%">
+              <article class="d-flex flex-column justify-content-between" style="height: 80%;"
+              >
+                <div class="col d-flex justify-content-center">
+                  <h2 class="fw-bold text-light text-center fs-3 p-4">
+                    Está esperando o quê? Rastrei sua encomenda agora.
+                  </h2>
+                </div>
+                <div class="col">
+                  <div class="d-flex justify-content-center">
+                    <div class="input-group shadow" style="width: 75%">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Código de rastreio"
+                        aria-label="Código de rastreio"
+                        aria-describedby="button-addon3"
+                      />
+                      <button
+                        class="btn btn-secondary btn-lg"
+                        type="button"
+                        id="button-addon2"
+                      >
+                        Rastrear
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="d-flex justify-content-center">
+                    <div class="bg-light tracking-numbers d-flex justify-content-center align-items-center shadow">
+                      <p class="fs-4 text-primary m-0">
+                        Já foram rastreadas <span class="fw-bold">500 encomendas</span> com o carteiro digital
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+    
+        <section style="margin-top: 4rem;">
+            <div class="container" style="min-height: 60vh">
+                <div class="row">
+                    <h2 class="text-primary fw-bold text-center p-4">
+                        Como funciona o carteiro digital?
+                    </h2>
+                </div>
+                <div class="row d-flex align-items-center g-4" style="height: 100%;">
+                    <div class="col d-flex justify-content-center">
+                        <div class="card p-4 shadow border-none" style="width: 18rem;">
+                            <img src="./images/airplane.svg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                              <p class="card-text text-primary">Está esperando alguma encomenda vinda do exterior? Sem problemas, você será avisado quando ela for recebida pelos Correios do Brasil.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card p-4 shadow border-none" style="width: 18rem;">
+                            <img src="./images/post-office.svg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                              <p class="card-text text-primary">Sabe aquela ansiedade que te faz ficar rastreando sua encomenda a cada hora? Com o carteiro digital você será notificado toda vez ela se movimentar.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card p-4 shadow border-opacity-10 border-none" style="width: 18rem;">
+                            <img src="./images/delivery-house.svg" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                              <p class="card-text text-primary">Precisa ser lembrado no momento em que sua encomenda sair para entrega? Fique tranquilo, o carteiro digital vai te alertar lá no Telegram.</p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 4rem;">
+            <div class="container" style="min-height: 60vh">
+               <div class="row">
+                     <h2 class="text-primary fw-bold text-center p-4">
+                          Dúvidas frequentes
+                     </h2>
+               </div>
+               <div class="row faq-data" style="heigth: 60%;">
+                    <div class="col d-flex align-items-center justify-content-center">
+                            <img src="./images/mailman.svg" alt="mailman" style="height: 25rem" />
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <div class="accordion" id="accordionExample" style="width: 100%;">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Accordion Item #1
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Accordion Item #2
+                                </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Accordion Item #3
+                                </button>
+                              </h2>
+                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Accordion Item #4
+                                  </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
+                                  </div>
+                                </div>
+                          </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Accordion Item #5
+                                  </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
+                                  </div>
+                                </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Accordion Item #6
+                              </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Accordion Item #7
+                                  </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
+                                  </div>
+                                </div>
+                          </div>
+                    </div>
+               </div>
+            </div>
+        </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

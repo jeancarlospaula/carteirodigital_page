@@ -1,0 +1,69 @@
+:root {
+    --bs-blue: #0d6efd;
+}
+
+.main-title {
+    font-size: 3rem
+}
+
+.main-sub-title {
+    font-size: 1.4rem
+}
+
+.contact-btn {
+    color: var(--bs-blue);
+}
+
+.contact-btn:hover {
+    transition: 0.5s;
+}
+
+.tracking-numbers {
+    width: 75%;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    position: absolute;
+    bottom: -20%
+}
+
+.border-none {
+    border: none;
+}
+
+.tracking-data {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .faq-data {
+        display: flex;
+        flex-direction: column-reverse
+    }
+}
+
+@media (max-width: 1024px) {
+    .home-data {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .home-article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .justify-center {
+        justify-content: center;
+    }
+
+    .align-center {
+        align-items: center;
+    }
+}
+
+
+
