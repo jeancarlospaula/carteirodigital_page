@@ -15,8 +15,8 @@
   </head>
   <body>
     <header class="navbar fixed-top bg-white shadow-sm">
-        <section class="container">
-            <section class="row no-gutters" style="width: 100%">
+        <section class="container navbar-container">
+            <section class="row no-gutters navbar-row">
               <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                   <a class="navbar-brand text-primary" href="#"
@@ -40,25 +40,26 @@
                         <a
                           class="nav-link active text-secondary"
                           aria-current="page"
-                          href="#"
+                          href="#inicio"
                           >Início</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Rastrear</a>
+                        <a class="nav-link text-secondary" href="#rastrear">Rastrear</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#"
+                        <a class="nav-link text-secondary" href="#como-funciona"
                           >Como funciona</a
                         >
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">FAQ</a>
+                        <a class="nav-link text-secondary" href="#faq">FAQ</a>
                       </li>
                       <li class="nav-item">
                         <a
                           type="button"
                           class="nav-link btn btn-outline-primary contact-btn"
+                          data-bs-toggle="modal" data-bs-target="#contactModal"
                           >Contato</a
                         >
                       </li>
@@ -70,13 +71,12 @@
         </section>
     </header>
 
-    <main style="margin-top: 4rem;">
-        <section class="container">
-          <div class="row home-article" style="min-height: 80vh">
+    <main>
+        <section id="inicio" class="container">
+          <div class="row home-row">
             <div class="col d-flex align-items-center">
               <article
-                class="d-flex flex-column justify-content-around justify-center md-justify-content-center"
-                style="height: 50%"
+                class="d-flex flex-column justify-content-around align-center-column text-center-column home-article"
               >
                 <h1 class="fw-bold text-primary main-title">
                   Rastrear encomendas pelo Telegram? Agora é possível!
@@ -87,38 +87,40 @@
                   <span class="fw-bold">carteiro digital</span>. Simples, rápido e
                   grátis.
                 </p>
-                <div class="col-6">
+                <div class="col-6 main-button-col">
                   <a
                     type="button"
-                    class="btn btn-lg btn-primary text-light shadow"
-                    style="width: 100%"
-                    >Rastrear encomenda</a
+                    class="btn btn-lg btn-primary text-light shadow main-button"
+                    href="https://t.me/carteirodigital_bot"
+                    target="_blank"
+                    >Rastrear no Telegram</a
                   >
                 </div>
               </article>
             </div>
-            <div class="col-6 d-flex align-items-center justify-content-end">
-              <img src="./images/delivery-animate.svg" alt="delivery" style="height: 30rem" />
+            <div class="col d-flex align-items-center justify-content-end home-img-col">
+              <img src="./images/delivery-animate.svg" alt="delivery" class="home-img"/>
             </div>
           </div>
         </section>
     
-        <section class="bg-primary">
-          <div class="container tracking-data" style="min-height: 30vh">
-            <div class="row d-flex align-items-center" style="height: 100%">
-              <article class="d-flex flex-column justify-content-between" style="height: 80%;"
+        <section id="rastrear" class="bg-primary">
+          <div class="container tracking-data">
+            <div class="row d-flex align-items-center"
+            >
+              <article class="d-flex flex-column justify-content-between"
               >
                 <div class="col d-flex justify-content-center">
                   <h2 class="fw-bold text-light text-center fs-3 p-4">
                     Está esperando o quê? Rastrei sua encomenda agora.
                   </h2>
                 </div>
-                <div class="col">
-                  <div class="d-flex justify-content-center">
-                    <div class="input-group shadow" style="width: 75%">
+                <div class="col py-4">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="input-group shadow tracking-form">
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control tracking-code-input"
                         placeholder="Código de rastreio"
                         aria-label="Código de rastreio"
                         aria-describedby="button-addon3"
@@ -127,15 +129,25 @@
                         class="btn btn-secondary btn-lg"
                         type="button"
                         id="button-addon2"
+                        data-bs-target="#trackingModal"
+                        data-bs-toggle="modal"
                       >
                         Rastrear
                       </button>
                     </div>
                   </div>
                 </div>
+                <!-- <div class="col d-flex justify-content-center gap-5 py-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" fill="#fff" class="bi bi-box-seam-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2rem" fill="#fff" class="bi bi-truck" viewBox="0 0 16 16">
+                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                </div> -->
                 <div class="col">
                   <div class="d-flex justify-content-center">
-                    <div class="bg-light tracking-numbers d-flex justify-content-center align-items-center shadow">
+                    <div class="bg-light tracking-numbers text-center d-flex justify-content-center align-items-center shadow">
                       <p class="fs-4 text-primary m-0">
                         Já foram rastreadas <span class="fw-bold">500 encomendas</span> com o carteiro digital
                       </p>
@@ -147,16 +159,16 @@
           </div>
         </section>
     
-        <section style="margin-top: 4rem;">
-            <div class="container" style="min-height: 60vh">
+        <section id="como-funciona" class="how-works-section">
+            <div class="container how-works-container">
                 <div class="row">
                     <h2 class="text-primary fw-bold text-center p-4">
                         Como funciona o carteiro digital?
                     </h2>
                 </div>
-                <div class="row d-flex align-items-center g-4" style="height: 100%;">
+                <div class="row d-flex align-items-center g-4 how-works-cards-row">
                     <div class="col d-flex justify-content-center">
-                        <div class="card p-4 shadow border-none" style="width: 18rem;">
+                        <div class="card p-4 shadow border-none how-works-card">
                             <img src="./images/airplane.svg" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                               <p class="card-text text-primary">Está esperando alguma encomenda vinda do exterior? Sem problemas, você será avisado quando ela for recebida pelos Correios do Brasil.</p>
@@ -164,7 +176,7 @@
                           </div>
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <div class="card p-4 shadow border-none" style="width: 18rem;">
+                        <div class="card p-4 shadow border-none how-works-card">
                             <img src="./images/post-office.svg" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                               <p class="card-text text-primary">Sabe aquela ansiedade que te faz ficar rastreando sua encomenda a cada hora? Com o carteiro digital você será notificado toda vez ela se movimentar.</p>
@@ -172,7 +184,7 @@
                           </div>
                     </div>
                     <div class="col d-flex justify-content-center">
-                        <div class="card p-4 shadow border-opacity-10 border-none" style="width: 18rem;">
+                        <div class="card p-4 shadow border-opacity-10 border-none how-works-card">
                             <img src="./images/delivery-house.svg" class="card-img-top" alt="...">
                             <div class="card-body text-center">
                               <p class="card-text text-primary">Precisa ser lembrado no momento em que sua encomenda sair para entrega? Fique tranquilo, o carteiro digital vai te alertar lá no Telegram.</p>
@@ -183,26 +195,26 @@
             </div>
         </section>
 
-        <section style="margin-top: 4rem;">
-            <div class="container" style="min-height: 60vh">
+        <section id="faq">
+            <div class="container pb-5 faq-container">
                <div class="row">
                      <h2 class="text-primary fw-bold text-center p-4">
                           Dúvidas frequentes
                      </h2>
                </div>
-               <div class="row faq-data" style="heigth: 60%;">
+               <div class="row faq-data-row">
                     <div class="col d-flex align-items-center justify-content-center">
-                            <img src="./images/mailman.svg" alt="mailman" style="height: 25rem" />
+                            <img src="./images/mailman.svg" alt="mailman" class="faq-img"/>
                     </div>
                     <div class="col d-flex align-items-center justify-content-center">
-                        <div class="accordion" id="accordionExample" style="width: 100%;">
+                        <div class="accordion accordion-group accordion-group-items" id="accordion-group">
                             <div class="accordion-item">
                               <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                   Accordion Item #1
                                 </button>
                               </h2>
-                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-group">
                                 <div class="accordion-body">
                                     These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
                                 </div>
@@ -214,7 +226,7 @@
                                   Accordion Item #2
                                 </button>
                               </h2>
-                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-group">
                                 <div class="accordion-body">
                                     These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
                                 </div>
@@ -226,7 +238,7 @@
                                   Accordion Item #3
                                 </button>
                               </h2>
-                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion-group">
                                 <div class="accordion-body">
                                     These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
                                 </div>
@@ -238,7 +250,7 @@
                                     Accordion Item #4
                                   </button>
                                 </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordion-group">
                                   <div class="accordion-body">
                                     These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
                                   </div>
@@ -250,7 +262,7 @@
                                     Accordion Item #5
                                   </button>
                                 </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordion-group">
                                   <div class="accordion-body">
                                     These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
                                   </div>
@@ -262,7 +274,7 @@
                                 Accordion Item #6
                               </button>
                             </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordion-group">
                               <div class="accordion-body">
                                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                               </div>
@@ -274,7 +286,7 @@
                                     Accordion Item #7
                                   </button>
                                 </h2>
-                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordion-group">
                                   <div class="accordion-body">
                                     These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
                                   </div>
@@ -285,6 +297,85 @@
             </div>
         </section>
     </main>
+
+    <footer class="bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex justify-content-center align-items-center">
+            <p class="text-center text-white footer-text">© 2022 <a target="_blank" href="https://github.com/jeancarlospaula" class="text-light">J. C. de Paula</a> | Todos os direitos reservados</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h5 class="modal-title text-primary" id="contactModalLabel">Entre em contato</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nameInput" maxlength="100" required>
+              </div>
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailInput" maxlength="100" required>
+              </div>
+              <div class="mb-3">
+                <label for="textInput" class="form-label">Mensagem</label>
+                <textarea type="password" class="form-control contact-message-input" id="textInput" maxlength="500"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary contact-button-form">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="trackingModal" tabindex="-1" aria-labelledby="trackingModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h5 class="modal-title text-primary fw-normal" id="contactModalLabel">carteiro<span class ="fw-bold">digital</span> - WEB</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Código</label>
+                <input type="text" class="form-control" id="nameInput" disabled>
+              </div>
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Status</label>
+                <input type="text" class="form-control" id="nameInput" disabled>
+              </div>
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Local</label>
+                <input type="text" class="form-control" id="nameInput" disabled>
+              </div>
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Destino</label>
+                <input type="text" class="form-control" id="nameInput" disabled>
+              </div>
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Última atualização</label>
+                <input type="text" class="form-control" id="nameInput" disabled>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="https://t.me/carteirodigital_bot" target="_blank" class="btn btn-primary contact-button-form">Quero ser notificado no telegram</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"

@@ -1,9 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
 :root {
     --bs-blue: #0d6efd;
+}
+html { 
+    scroll-padding-top: 4.7rem;
+    scroll-behavior: smooth; 
+}
+
+body { 
+    padding-top: 4.5rem; 
 }
 
 .header-nav {
     z-index: 1;
+}
+
+.navbar-row {
+    width: 100%
 }
 
 .main-title {
@@ -27,7 +49,7 @@
     padding: 1.25rem;
     border-radius: 1.5rem;
     position: absolute;
-    bottom: -20%
+    bottom: -2rem;
 }
 
 .border-none {
@@ -36,14 +58,75 @@
 
 .tracking-data {
     position: relative;
+    min-height: 20rem;
 }
 
-@media (max-width: 768px) {
-    .faq-data {
-        display: flex;
-        flex-direction: column-reverse
-    }
+.footer-text{
+    margin: 0;
+    padding: 2rem;
 }
+
+.home-img {
+    width: 30rem;
+}
+
+.faq-img {
+    height: 25rem;
+}
+
+.how-works-section{
+    margin-top: 4rem;
+}
+
+.contact-message-input {
+    height: 10rem;
+    resize: none;
+}
+
+.contact-button-form {
+    width: 100%;
+}
+
+.home-row {
+    min-height: 80vh
+}
+
+.home-article {
+    height: 50%
+}
+
+.main-button {
+    width: 100%
+}
+
+.tracking-form {
+    width: 75%
+}
+
+.how-works-container {
+    min-height: 40rem
+}
+
+.how-works-cards-row {
+    height: 100%;
+}
+
+.how-works-card {
+    width: 18rem;
+}
+
+.faq-container {
+    min-height: 40rem
+}
+
+.faq-data-row {
+    height: 60%;
+}
+
+.accordion-group-items {
+    width: 100%;
+}
+
 
 @media (max-width: 1024px) {
     .home-data {
@@ -53,21 +136,117 @@
         justify-content: center;
     }
 
-    .home-article {
+    .home-row {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .justify-center {
-        justify-content: center;
+    .home-img-col {
+        justify-content: center !important;
+        align-items: center !important;
     }
 
-    .align-center {
+    .align-center-column {
         align-items: center;
+    }
+
+    .text-center-column {
+        text-align: center;
+    }
+
+    .main-title, .main-sub-title, .main-button-col {
+        padding: 1.875rem 1.875rem 0 1.875rem;
+        margin-bottom: 0;
+    }
+
+    .navbar-container {
+        display: flex !important;
+        justify-content: center !important;
     }
 }
 
+@media (max-width: 768px) {
+    .faq-data-row {
+        display: flex;
+        flex-direction: column-reverse
+    }
 
+    .tracking-numbers{
+        bottom: -3rem;
+    }
+
+    .faq-container {
+        padding-bottom: 0 !important;
+    }
+
+    .faq-img {
+        height: 20rem;
+    }
+
+    .main-button-col {
+        width: 75%;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-img, .faq-img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-button-col{
+        padding: 1.875rem 0 0 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .main-sub-title {
+        font-size: 1.2rem;
+    }
+
+    .tracking-numbers{
+        bottom: -4rem;
+    }
+
+    .tracking-data {
+        min-height: 22rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .main-sub-title {
+        font-size: 1.2rem;
+    }
+
+    .home-img, .faq-img {
+        padding: 1.25rem;
+    }
+
+    .tracking-data {
+        min-height: 24rem;
+    }
+
+    .tracking-numbers{
+        bottom: -5rem;
+    }
+
+    .how-works-section {
+        margin-top: 6rem
+    }
+
+    .tracking-code-input::placeholder{
+        font-size: 0.6rem;
+    }
+}
 
