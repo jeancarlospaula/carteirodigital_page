@@ -50,6 +50,7 @@ body {
     border-radius: 1.5rem;
     position: absolute;
     bottom: -2rem;
+    font-size: 1.5rem;
 }
 
 .border-none {
@@ -58,7 +59,7 @@ body {
 
 .tracking-data {
     position: relative;
-    min-height: 20rem;
+    min-height: 16rem;
 }
 
 .footer-text{
@@ -174,7 +175,12 @@ body {
     }
 
     .tracking-numbers{
-        bottom: -3rem;
+        bottom: -1.75rem;
+        font-size: 1rem;
+    }
+
+    .tracking-data {
+        min-height: 15rem;
     }
 
     .faq-container {
@@ -196,12 +202,6 @@ body {
     }
 }
 
-@media (max-width: 375px) {
-    .main-button-col{
-        padding: 1.875rem 0 0 0;
-    }
-}
-
 @media (max-width: 425px) {
     .main-title {
         font-size: 2rem;
@@ -212,11 +212,34 @@ body {
     }
 
     .tracking-numbers{
-        bottom: -4rem;
+        bottom: -2.5rem;
+        font-size: 1rem;
     }
 
     .tracking-data {
-        min-height: 22rem;
+        min-height: 17rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-button-col{
+        padding: 1.875rem 0 0 0;
+    }
+
+    .tracking-data {
+        min-height: 19rem;
+    }
+
+    .tracking-numbers{
+        bottom: -3.5rem;
+    }
+
+    .tracking-button {
+        font-size: 0.75rem;
+    }
+
+    .tracking-code-input::placeholder{
+        font-size: 0.75rem;
     }
 }
 
@@ -234,19 +257,15 @@ body {
     }
 
     .tracking-data {
-        min-height: 24rem;
+        min-height: 19rem;
     }
 
     .tracking-numbers{
-        bottom: -5rem;
+        bottom: -3.5rem;
     }
 
     .how-works-section {
         margin-top: 6rem
-    }
-
-    .tracking-code-input::placeholder{
-        font-size: 0.6rem;
     }
 }
 
