@@ -2,7 +2,7 @@ const scrollAnimation = () => {
   const scrollReveal = ScrollReveal({
     origin: "top",
     distance: "30px",
-    duration: 1000,
+    duration: 700,
     reset: true,
   });
 
@@ -21,6 +21,19 @@ const scrollAnimation = () => {
         .faq-container .faq-img,
         .faq-container .accordion
       `,
+    { interval: 100 }
+  );
+
+  const scrollRevealAccordion = ScrollReveal({
+    origin: "top",
+    distance: "-75%",
+    duration: 700,
+    reset: true,
+  });
+
+  scrollRevealAccordion.reveal(
+    `.faq-container .accordion
+    `,
     { interval: 100 }
   );
 };
