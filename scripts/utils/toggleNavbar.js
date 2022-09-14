@@ -4,8 +4,10 @@ const toggleNavbar = () => {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      const bsCollapse = new bootstrap.Collapse(menuToggle);
-      bsCollapse.toggle();
+      if (screen.width < 992) {
+        const bsCollapse = new bootstrap.Collapse(menuToggle);
+        bsCollapse.toggle();
+      }
     });
   });
 };

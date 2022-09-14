@@ -1,382 +1,396 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carteiro Digital | Rastreio de encomendas pelo Telegram</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
-    <header class="navbar fixed-top bg-white shadow-sm">
-        <section class="container navbar-container">
-            <section class="row no-gutters navbar-row">
-              <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                  <a class="navbar-brand text-primary" href="#"
-                    >carteiro<span class="fw-bold">digital</span></a
-                  >
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-    
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                      <li class="nav-item">
-                        <a
-                          class="nav-link active text-secondary"
-                          aria-current="page"
-                          href="#inicio"
-                          >Início</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#rastrear">Rastrear</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#como-funciona"
-                          >Como funciona</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#faq">FAQ</a>
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          type="button"
-                          class="nav-link btn btn-outline-primary contact-btn"
-                          data-bs-toggle="modal" data-bs-target="#contactModal"
-                          >Contato</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-            </section>
-        </section>
-    </header>
 
-    <main>
-        <section id="inicio" class="container">
-          <div class="row home-row">
-            <div class="col d-flex align-items-center">
-              <article
-                class="d-flex flex-column justify-content-around align-center-column text-center-column home-article"
-              >
-                <h1 class="fw-bold text-primary main-title">
-                  Rastrear encomendas pelo Telegram? Agora é possível!
-                </h1>
-                <p class="main-sub-title">
-                  Seja notificado pelo
-                  <span class="fw-bold">Carteiro Digital</span> sempre que seus pacotes dos Correios se
-                  movimentarem. Simples, rápido e
-                  grátis.
-                </p>
-                <div class="col-6 main-button-col">
-                  <a
-                    type="button"
-                    class="btn btn-lg btn-primary text-light shadow main-button"
-                    href="https://t.me/carteirodigital_bot"
-                    target="_blank"
-                    >Rastrear no Telegram</a
-                  >
-                </div>
-              </article>
-            </div>
-            <div class="col d-flex align-items-center justify-content-end home-img-col">
-              <img src="./images/delivery-animate.svg" alt="delivery" class="home-img"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carteiro Digital | Rastreio de encomendas pelo Telegram</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="shortcut icon" href="images/logo-carteiro-digital.svg" type="image/x-icon">
+</head>
+
+<body>
+  <header class="navbar fixed-top bg-white shadow-sm">
+    <section class="container navbar-container">
+      <div class="row no-gutters navbar-content">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand text-primary" href="index.html">
+              <img src="images/logo-carteiro-digital.svg" alt="Carteiro Digital Logo" width="30" height="30"
+                class="navbar-logo-img">
+              <span class="navbar-logo-text">carteiro</span><span class="fw-bold navbar-logo-text">digital</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active text-secondary" aria-current="page" href="#inicio">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="#rastrear">Rastrear</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="#como-funciona">Como funciona</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-secondary" href="#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a type="button" class="nav-link btn btn-outline-primary contact-btn" data-bs-toggle="modal"
+                    data-bs-target="#contactModal">Contato</a>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
-    
-        <section id="rastrear" class="bg-primary">
-          <div class="container tracking-data">
-            <div class="row d-flex align-items-center"
-            >
-              <article class="d-flex flex-column justify-content-between tracking-article"
-              >
-                <div class="col d-flex justify-content-center">
-                  <h2 class="fw-bold text-light text-center fs-3 p-4 tracking-title">
-                    Está esperando o quê? Rastrei sua encomenda agora.
-                  </h2>
-                </div>
-                <div class="col py-4">
-                  <div class="d-flex justify-content-center align-items-center">
-                    <div class="input-group shadow tracking-form">
-                      <input
-                        type="text"
-                        class="form-control tracking-code-input"
-                        placeholder="Código de rastreio"
-                        aria-label="Código de rastreio"
-                        aria-describedby="button-addon3"
-                      />
-                      <button
-                        class="btn btn-secondary btn-lg tracking-button"
-                        type="button"
-                        id="button-addon2"
-                        data-bs-target="#trackingModal"
-                        data-bs-toggle="modal"
-                      >
-                        Rastrear
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="d-flex justify-content-center">
-                    <div class="bg-light tracking-numbers text-center d-flex justify-content-center align-items-center shadow">
-                      <p class="text-primary m-0">
-                        Já foram rastreadas <span class="fw-bold">500 encomendas</span> com o carteiro digital
-                      </p>
-                    </div>
-                  </div>
-                </div>
+        </nav>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <div class="container home-container">
+        <div class="row home-content">
+          <div class="col d-flex align-items-center">
+            <article
+              class="d-flex flex-column justify-content-around align-center-column text-center-column home-article">
+              <h1 class="fw-bold text-primary home-main-title">
+                Rastrear encomendas pelo Telegram? Agora é possível!
+              </h1>
+              <p class="home-main-sub-title">
+                Seja notificado pelo
+                <span class="fw-bold">Carteiro Digital</span> sempre que seus pacotes dos Correios se
+                movimentarem. Simples, rápido e
+                grátis.
+              </p>
+              <div class="col-6 home-main-button-col">
+                <a type="button" class="btn btn-lg btn-primary text-light shadow home-main-button"
+                  href="https://t.me/carteirodigital_bot" target="_blank">Rastrear no Telegram</a>
               </div>
             </article>
           </div>
-        </section>
-    
-        <section id="como-funciona" class="how-works-section">
-            <div class="container how-works-container">
-                <div class="row">
-                    <h2 class="text-primary fw-bold text-center p-4 how-works-title">
-                        Como funciona o carteiro digital?
-                    </h2>
-                </div>
-                <div class="row d-flex align-items-center g-4 how-works-cards-row">
-                    <div class="col d-flex justify-content-center">
-                        <div class="card p-4 shadow border-none how-works-card">
-                            <img src="./images/airplane.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                              <p class="card-text text-primary">Está esperando alguma encomenda vinda do exterior? Sem problemas, você será avisado quando ela for recebida pelos Correios do Brasil.</p>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="card p-4 shadow border-none how-works-card">
-                            <img src="./images/post-office.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                              <p class="card-text text-primary">Sabe aquela ansiedade que te faz ficar rastreando sua encomenda a cada hora? Com o carteiro digital você será notificado toda vez ela se movimentar.</p>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="card p-4 shadow border-opacity-10 border-none how-works-card">
-                            <img src="./images/delivery-house.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                              <p class="card-text text-primary">Precisa ser lembrado no momento em que sua encomenda sair para entrega? Fique tranquilo, o carteiro digital vai te alertar lá no Telegram.</p>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq">
-            <div class="container pb-5 faq-container">
-               <div class="row">
-                     <h2 class="text-primary fw-bold text-center p-4 faq-title">
-                          Dúvidas frequentes
-                     </h2>
-               </div>
-               <div class="row faq-data-row">
-                    <div class="col d-flex align-items-center justify-content-center">
-                            <img src="./images/mailman.svg" alt="mailman" class="faq-img"/>
-                    </div>
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <div class="accordion accordion-group accordion-group-items" id="accordion-group">
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button text-primary fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  É possível rastrear encomendas de outros países?
-                                </button>
-                              </h2>
-                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-group">
-                                <div class="accordion-body text-secondary">
-                                    Ainda não, somente encomendas transportadas pelos Correios do Brasil. Mas, é possível informar um código rastreio internacional e receber notificações assim que ela chegar no Brasil.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button text-primary fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                  Consigo rastrear mais de uma encomenda?
-                                </button>
-                              </h2>
-                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-group">
-                                <div class="accordion-body text-secondary">
-                                    Sim, você pode rastrear quantas encomendas quiser. É só informar o código de rastreio de cada uma delas e o <span class="fw-semibold">Carteiro Digital</span> vai te notificar quando elas se movimentarem.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button text-primary fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  Em quais situações serei notificado?
-                                </button>
-                              </h2>
-                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion-group">
-                                <div class="accordion-body text-secondary">
-                                    Você será notificado quando sua encomenda for recebida pelos Correios do Brasil (se ela vir do exterior), sempre que ela se movimentar, no momento em que ela sair para entrega e assim que a encomenda for entregue.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                  <button class="accordion-button text-primary text-primary fw-semibold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    É possível desativar as notificações?
-                                  </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordion-group">
-                                  <div class="accordion-body text-secondary">
-                                    É possível desativar as notificações do <span class="fw-semibold">Carteiro Digital</span> a qualquer momento. Basta digitar o comando <span class="fw-semibold">/stop</span> no chat do Telegram. Quando uma encomenda sua for entregue, você também não receberá mais notificações sobre ela. 
-                                  </div>
-                                </div>
-                          </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                  <button class="accordion-button fw-semibold text-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    É necessário informar dados pessoais?
-                                  </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordion-group">
-                                  <div class="accordion-body text-secondary">
-                                    Não, você não precisa informar nenhum dado pessoal para usar o <span class="fw-semibold">Carteiro Digital</span>. Os únicos dados que serão coletados são o seu <span class="fst-italic">nome</span> e <span class="fst-italic">usuário do Telegram</span>, para receber mensagens personalizadas, e os <span class="fst-italic">códigos de rastreio</span> das encomendas que você informar. Ao rastrear suas encomendas, você estará concordando com os nossos <a href="#politica-privacidade" class="text-primary fw-semibold">Termos de Uso e Política de Privacidade</a>.
-                                  </div>
-                                  <div class="accordion-body text-secondary">
-                                    Para excluír o seu <span class="fst-italic">nome</span>, <span class="fst-italic">usuário do Telegram</span> e <span class="fst-italic">códigos de rastreio</span> do nosso banco de dados, basta digitar o comando <span class="fw-semibold">/quit</span> no chat do Telegram.
-                                  </div>
-                                </div>
-                          </div>
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingSix">
-                              <button class="accordion-button fw-semibold text-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                Consigo rastrear encomendas em quais dispositivos?
-                              </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordion-group">
-                              <div class="accordion-body text-secondary">
-                               É possível rastrear suas encomendas em qualquer dispositivo que possua o aplicativo do Telegram instalado. Também é possível pelo navagador, basta acessar a seção <a href="#rastrear" class="text-primary fw-semibold">rastrear</a>.
-                              </div>
-                            </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSeven">
-                                  <button class="accordion-button fw-semibold collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    É possível utilizar a API de rastreamento do Carteiro Digital?
-                                  </button>
-                                </h2>
-                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordion-group">
-                                  <div class="accordion-body text-secondary">
-                                    Sim, você pode utilizar a API de rastreamento do <span class="fw-semibold">Carteiro Digital</span> para rastrear suas encomendas. Para mais informações, acesse a <a href="#api" class="text-primary fw-semibold">documentação da API</a>.
-                                  </div>
-                                </div>
-                          </div>
-                    </div>
-               </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col d-flex justify-content-center align-items-center">
-            <p class="text-center text-white footer-text">© 2022 <a target="_blank" href="https://github.com/jeancarlospaula" class="text-light">J. C. de Paula</a> | Todos os direitos reservados</p>
+          <div class="col d-flex align-items-center justify-content-end home-img-col">
+            <img src="./images/delivery-animate.svg" alt="delivery" class="home-img" />
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <form>
-            <div class="modal-header">
-              <h5 class="modal-title text-primary" id="contactModalLabel">Entre em contato</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <section id="rastrear" class="bg-primary">
+      <div class="container tracking-container">
+        <div class="row d-flex align-items-center">
+          <article class="d-flex flex-column justify-content-between tracking-article">
+            <div class="col d-flex justify-content-center">
+              <h2 class="fw-bold text-light text-center fs-3 p-4 tracking-title">
+                Está esperando o quê? Rastrei sua encomenda agora.
+              </h2>
             </div>
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="nameInput" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nameInput" maxlength="100" required>
-              </div>
-              <div class="mb-3">
-                <label for="emailInput" class="form-label">Email</label>
-                <input type="email" class="form-control" id="emailInput" maxlength="100" required>
-              </div>
-              <div class="mb-3">
-                <label for="textInput" class="form-label">Mensagem</label>
-                <textarea type="password" class="form-control contact-message-input" id="textInput" maxlength="500"></textarea>
+            <div class="col py-4">
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="input-group shadow tracking-form">
+                  <input type="text" class="form-control tracking-code-input" placeholder="Código de rastreio"
+                    aria-label="Código de rastreio" aria-describedby="button-addon3" />
+                  <button class="btn btn-secondary btn-lg tracking-button" type="button" id="button-addon2"
+                    data-bs-target="#trackingModal" data-bs-toggle="modal">
+                    Rastrear
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary contact-button-form">Enviar</button>
+            <div class="col">
+              <div class="d-flex justify-content-center">
+                <div
+                  class="bg-light tracking-numbers-text text-center d-flex justify-content-center align-items-center shadow">
+                  <p class="text-primary m-0">
+                    Já foram rastreadas <span class="fw-bold tracking-numbers">500 encomendas</span> com o Carteiro Digital
+                  </p>
+                </div>
+              </div>
             </div>
-          </form>
+        </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="how-works-section">
+      <div class="container how-works-container">
+        <div class="row">
+          <h2 class="text-primary fw-bold text-center p-4 how-works-title">
+            Como funciona o Carteiro Digital?
+          </h2>
+        </div>
+        <article class="row d-flex align-items-center g-4 how-works-article">
+          <div class="col d-flex justify-content-center">
+            <div class="card p-4 shadow border-0 how-works-card">
+              <img src="./images/airplane.svg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="card-text text-primary">Está esperando alguma encomenda vinda do exterior? Sem problemas, você
+                  será avisado quando ela for recebida pelos Correios do Brasil.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <div class="card p-4 shadow border-0 how-works-card">
+              <img src="./images/post-office.svg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="card-text text-primary">Sabe aquela ansiedade que te faz ficar rastreando sua encomenda a cada
+                  hora? Com o Carteiro Digital você será notificado toda vez ela se movimentar.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <div class="card p-4 shadow border-opacity-10 border-0 how-works-card">
+              <img src="./images/delivery-house.svg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <p class="card-text text-primary">Precisa ser lembrado no momento em que sua encomenda sair para
+                  entrega? Fique tranquilo, o Carteiro Digital vai te alertar lá no Telegram.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container pb-5 faq-container">
+        <div class="row">
+          <h2 class="text-primary fw-bold text-center p-4 faq-title">
+            Dúvidas frequentes
+          </h2>
+        </div>
+        <article class="row faq-data-article">
+          <div class="col d-flex align-items-center justify-content-center">
+            <img src="./images/mailman.svg" alt="mailman" class="faq-img" />
+          </div>
+          <div class="col d-flex align-items-center justify-content-center">
+            <div class="accordion accordion-group accordion-group-items" id="accordion-group">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button text-primary fw-semibold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    É possível rastrear encomendas de outros países?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordion-group">
+                  <div class="accordion-body text-secondary">
+                    Ainda não, somente encomendas transportadas pelos Correios do Brasil. Mas, é possível informar um
+                    código rastreio internacional e receber notificações assim que ela chegar no Brasil.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button text-primary fw-semibold collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    Consigo rastrear mais de uma encomenda?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordion-group">
+                  <div class="accordion-body text-secondary">
+                    Sim, você pode rastrear quantas encomendas quiser. É só informar o código de rastreio de cada uma
+                    delas e o <span class="fw-semibold">Carteiro Digital</span> vai te notificar quando elas se
+                    movimentarem.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button text-primary fw-semibold collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree">
+                    Em quais situações serei notificado?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordion-group">
+                  <div class="accordion-body text-secondary">
+                    Você será notificado quando sua encomenda for recebida pelos Correios do Brasil (se ela vir do
+                    exterior), sempre que ela se movimentar, no momento em que ela sair para entrega e assim que a
+                    encomenda for entregue.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button text-primary text-primary fw-semibold collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                    aria-controls="collapseFour">
+                    É possível desativar as notificações?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                  data-bs-parent="#accordion-group">
+                  <div class="accordion-body text-secondary">
+                    É possível desativar as notificações do <span class="fw-semibold">Carteiro Digital</span> a qualquer
+                    momento. Basta digitar o comando <span class="fw-semibold">/stop</span> no chat do Telegram. Quando
+                    uma encomenda sua for entregue, você também não receberá mais notificações sobre ela.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button fw-semibold text-primary collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                    aria-controls="collapseFive">
+                    É necessário informar dados pessoais?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                  data-bs-parent="#accordion-group">
+                  <div class="accordion-body text-secondary">
+                    Não, você não precisa informar nenhum dado pessoal para usar o <span class="fw-semibold">Carteiro
+                      Digital</span>. Os únicos dados que serão coletados são o seu <span class="fst-italic">nome</span>
+                    e <span class="fst-italic">usuário do Telegram</span>, para receber mensagens personalizadas, e os
+                    <span class="fst-italic">códigos de rastreio</span> das encomendas que você informar. Ao rastrear
+                    suas encomendas, você estará concordando com os nossos <a href="#politica-privacidade"
+                      class="text-primary fw-semibold">Termos de Uso e Política de Privacidade</a>.
+                  </div>
+                  <div class="accordion-body text-secondary">
+                    Para excluír o seu <span class="fst-italic">nome</span>, <span class="fst-italic">usuário do
+                      Telegram</span> e <span class="fst-italic">códigos de rastreio</span> do nosso banco de dados,
+                    basta digitar o comando <span class="fw-semibold">/quit</span> no chat do Telegram.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button fw-semibold text-primary collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                    aria-controls="collapseSix">
+                    Consigo rastrear encomendas em quais dispositivos?
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                  data-bs-parent="#accordion-group">
+                  <div class="accordion-body text-secondary">
+                    É possível rastrear suas encomendas em qualquer dispositivo que possua o aplicativo do Telegram
+                    instalado. Também é possível pelo navagador, basta acessar a seção <a href="#rastrear"
+                      class="text-primary fw-semibold">rastrear</a>.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button fw-semibold collapsed text-primary" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                    aria-controls="collapseSeven">
+                    É possível utilizar a API de rastreamento do Carteiro Digital?
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                  data-bs-parent="#accordion-group">
+                  <div class="accordion-body text-secondary">
+                    Sim, você pode utilizar a API de rastreamento do <span class="fw-semibold">Carteiro Digital</span>
+                    para rastrear suas encomendas. Para mais informações, acesse a <a href="#api"
+                      class="text-primary fw-semibold">documentação da API</a>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+    </section>
+  </main>
+
+  <footer class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col d-flex justify-content-center align-items-center">
+          <p class="text-center text-white footer-text">© <span class="footer-year">2022</span> <a target="_blank"
+              href="https://github.com/jeancarlospaula" class="text-light">J. C. de Paula</a> | Todos os direitos
+            reservados</p>
         </div>
       </div>
     </div>
-    
-    <div class="modal fade" id="trackingModal" tabindex="-1" aria-labelledby="trackingModal" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <form>
-            <div class="modal-header">
-              <h5 class="modal-title text-primary fw-normal" id="contactModalLabel">carteiro<span class ="fw-bold">digital</span> - WEB</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </footer>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h5 class="modal-title text-primary" id="contactModalLabel">carteiro<span
+              class="fw-bold">digital</span> - Entre em contato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="contact-form-name" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="contact-form-name" maxlength="100" required>
             </div>
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="nameInput" class="form-label">Código</label>
-                <input type="text" class="form-control" id="nameInput" disabled>
-              </div>
-              <div class="mb-3">
-                <label for="nameInput" class="form-label">Status</label>
-                <input type="text" class="form-control" id="nameInput" disabled>
-              </div>
-              <div class="mb-3">
-                <label for="nameInput" class="form-label">Local</label>
-                <input type="text" class="form-control" id="nameInput" disabled>
-              </div>
-              <div class="mb-3">
-                <label for="nameInput" class="form-label">Destino</label>
-                <input type="text" class="form-control" id="nameInput" disabled>
-              </div>
-              <div class="mb-3">
-                <label for="nameInput" class="form-label">Última atualização</label>
-                <input type="text" class="form-control" id="nameInput" disabled>
-              </div>
+            <div class="mb-3">
+              <label for="contact-form-email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contact-form-email" maxlength="100" required>
             </div>
-            <div class="modal-footer">
-              <a href="https://t.me/carteirodigital_bot" target="_blank" class="btn btn-primary contact-button-form">Quero ser notificado no Telegram</a>
+            <div class="mb-3">
+              <label for="contact-form-message" class="form-label">Mensagem</label>
+              <textarea type="password" class="form-control" id="contact-form-message"
+                maxlength="500"></textarea>
             </div>
-          </form>
-        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="contact-form-button">Enviar</button>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="scripts/app.js" type="module"></script>
-  </body>
+  <div class="modal fade" id="trackingModal" tabindex="-1" aria-labelledby="trackingModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h5 class="modal-title text-primary fw-normal" id="contactModalLabel">carteiro<span
+                class="fw-bold">digital</span> - Rastreio WEB</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="tracking-form-code" class="form-label">Código</label>
+              <input type="text" class="form-control" id="tracking-form-code" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="tracking-form-status" class="form-label">Status</label>
+              <input type="text" class="form-control" id="tracking-form-status" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="tracking-form-local" class="form-label">Local</label>
+              <input type="text" class="form-control" id="tracking-form-local" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="tracking-form-destiny" class="form-label">Destino</label>
+              <input type="text" class="form-control" id="tracking-form-destiny" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="tracking-form-date" class="form-label">Última atualização</label>
+              <input type="text" class="form-control" id="tracking-form-date" disabled>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://t.me/carteirodigital_bot" target="_blank" class="btn btn-primary" id="tracking-form-button">Quero
+              ser notificado no Telegram</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="scripts/app.js" type="module"></script>
+</body>
 </html>

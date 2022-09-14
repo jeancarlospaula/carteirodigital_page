@@ -7,20 +7,18 @@ const scrollAnimation = () => {
   });
 
   scrollReveal.reveal(
-    `
-        .home-article .main-title,
-        .home-article .main-sub-title,
-        .home-article .main-button,
-        .home-img-col .home-img,
-        .tracking-article .tracking-title,
-        .tracking-article .tracking-form,
-        .tracking-numbers,
-        .how-works-container .how-works-title,
-        .how-works-container .how-works-card,
-        .faq-container .faq-title,
-        .faq-container .faq-img,
-        .faq-container .accordion
-      `,
+    `.home-article .home-main-title,
+    .home-article .home-main-sub-title,
+    .home-article .home-main-button,
+    .home-img-col .home-img,
+    .tracking-article .tracking-title,
+    .tracking-article .tracking-form,
+    .tracking-article .tracking-numbers-text,
+    .how-works-container .how-works-title,
+    .how-works-container .how-works-card,
+    .faq-container .faq-title,
+    .faq-container .faq-img,
+    .faq-container .accordion`,
     { interval: 100 }
   );
 
@@ -31,11 +29,7 @@ const scrollAnimation = () => {
     reset: true,
   });
 
-  scrollRevealAccordion.reveal(
-    `.faq-container .accordion
-    `,
-    { interval: 100 }
-  );
+  scrollRevealAccordion.reveal(`.faq-container .accordion`, { interval: 100 });
 };
 
 export { scrollAnimation };
