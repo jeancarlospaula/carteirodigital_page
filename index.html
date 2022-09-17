@@ -93,15 +93,18 @@
                 Está esperando o quê? Rastrei sua encomenda agora.
               </h2>
             </div>
-            <div class="col py-4">
+            <div class="col py-4 tracking-input-group">
               <div class="d-flex justify-content-center align-items-center">
                 <div class="input-group shadow tracking-form">
-                  <input type="text" class="form-control tracking-code-input" placeholder="Código de rastreio"
-                    aria-label="Código de rastreio" aria-describedby="button-addon3" />
-                  <button class="btn btn-secondary btn-lg tracking-button" type="button" id="button-addon2"
-                    data-bs-target="#trackingModal" data-bs-toggle="modal">
+                  <input type="text" class="form-control tracking-input" placeholder="Código de rastreio"
+                    aria-label="Código de rastreio" aria-describedby="button-addon3"/>
+                  <button class="btn btn-secondary btn-lg tracking-button" type="button" id="frontTrackingButton">
                     Rastrear
                   </button>
+                  <button class="d-none" type="button" id="backTrackingButton" data-bs-target="#trackingModal" data-bs-toggle="modal"></button>
+                  <div class="invalid-code position-absolute text-warning fw-bold">
+                    Código inválido ou ainda não encontrado na base de dados dos Correios do Brasil.
+                  </div>
                 </div>
               </div>
             </div>
@@ -110,7 +113,7 @@
                 <div
                   class="bg-light tracking-numbers-text text-center d-flex justify-content-center align-items-center shadow">
                   <p class="text-primary m-0">
-                    Já foram rastreadas <span class="fw-bold tracking-numbers">500 encomendas</span> com o Carteiro Digital
+                    Já foram rastreadas <span class="fw-bold tracking-numbers"></span><span class="fw-bold"> encomendas</span> com o Carteiro Digital
                   </p>
                 </div>
               </div>
@@ -391,6 +394,7 @@
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="scripts/app.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="src/index.js" type="module"></script>
 </body>
 </html>

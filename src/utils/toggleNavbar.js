@@ -1,4 +1,4 @@
-const toggleNavbar = () => {
+export const toggleNavbar = () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const menuToggle = document.getElementById("navbarSupportedContent");
 
@@ -11,5 +11,3 @@ const toggleNavbar = () => {
     });
   });
 };
-
-export { toggleNavbar };

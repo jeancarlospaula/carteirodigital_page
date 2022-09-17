@@ -1,11 +1,10 @@
-const scrollAnimation = () => {
+export const scrollAnimation = () => {
   const scrollReveal = ScrollReveal({
     origin: "top",
     distance: "30px",
     duration: 700,
     reset: true,
   });
-
   scrollReveal.reveal(
     `.home-article .home-main-title,
     .home-article .home-main-sub-title,
@@ -21,15 +20,11 @@ const scrollAnimation = () => {
     .faq-container .accordion`,
     { interval: 100 }
   );
-
   const scrollRevealAccordion = ScrollReveal({
     origin: "top",
     distance: "-75%",
     duration: 700,
     reset: true,
   });
-
   scrollRevealAccordion.reveal(`.faq-container .accordion`, { interval: 100 });
 };
-
-export { scrollAnimation };

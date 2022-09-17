@@ -82,6 +82,12 @@ h2 {
   width: 75%;
 }
 
+.invalid-code {
+  bottom: -1.5625rem;
+  font-size: 0.75rem;
+  display: none;
+}
+
 /* HOW WORKS */
 .how-works-section {
   margin-top: 4rem;
@@ -136,7 +142,6 @@ h2 {
 /* MEDIA QUERIES */
 
 @media (max-width: 1024px) {
-
   /*HEADER*/
   .navbar-container {
     display: flex !important;
@@ -182,7 +187,6 @@ h2 {
 }
 
 @media (max-width: 991px) {
-
   /*HEADER*/
   .navbar-logo-text {
     display: none;
@@ -190,7 +194,6 @@ h2 {
 }
 
 @media (max-width: 768px) {
-
   /*HOME*/
   .home-main-button-col {
     width: 75%;
@@ -222,7 +225,6 @@ h2 {
 }
 
 @media (max-width: 576px) {
-
   /*HOME*/
   .home-img,
   .faq-img {
@@ -231,7 +233,6 @@ h2 {
 }
 
 @media (max-width: 425px) {
-
   /*HOME*/
   .home-main-title {
     font-size: 2rem;
@@ -250,10 +251,18 @@ h2 {
   .tracking-container {
     min-height: 17rem;
   }
+
+  .invalid-code {
+    bottom: -2rem;
+    font-size: 0.6rem
+  }
+
+  .tracking-input-group {
+    padding: 1rem 0 !important;
+  }
 }
 
 @media (max-width: 375px) {
-
   /*HOME*/
   .home-main-button-col {
     padding: 1.875rem 0 0 0;
@@ -272,13 +281,12 @@ h2 {
     font-size: 0.75rem;
   }
 
-  .tracking-code-input::placeholder {
+  .tracking-input::placeholder {
     font-size: 0.75rem;
   }
 }
 
 @media (max-width: 320px) {
-
   /*HOME*/
   .home-main-title {
     font-size: 2rem;
