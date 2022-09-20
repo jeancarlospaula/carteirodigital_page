@@ -5,7 +5,32 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Rastreie suas encomendas no Telegram utilizando o Carteiro Digital e seja notificado sempre que elas se movimentarem. Simples, rápido e grátis.">
+  <meta name="keywords" content="carteiro digital, rastreamento, correios, rastrear, bot, telegram">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carteirodigital.com">
+  <meta property="og:title" content="Carteiro Digital | Rastreio de encomendas pelo Telegram">
+  <meta property="og:description"
+    content="Rastreie suas encomendas no Telegram utilizando o Carteiro Digital e seja notificado sempre que elas se movimentarem. Simples, rápido e grátis.">
+  <meta property="og:image"
+    content="https://firebasestorage.googleapis.com/v0/b/carteirodigital-d7f2e.appspot.com/o/preview-carteiro-digital.png?alt=media&token=db430588-7fd9-4a8c-b4d3-dd59de63b2f4">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://carteirodigital.com">
+  <meta property="twitter:title" content="Carteiro Digital | Rastreio de encomendas pelo Telegram">
+  <meta property="twitter:description"
+    content="Rastreie suas encomendas no Telegram utilizando o Carteiro Digital e seja notificado sempre que elas se movimentarem. Simples, rápido e grátis.">
+  <meta property="twitter:image"
+    content="https://firebasestorage.googleapis.com/v0/b/carteirodigital-d7f2e.appspot.com/o/preview-carteiro-digital.png?alt=media&token=db430588-7fd9-4a8c-b4d3-dd59de63b2f4">
+
+  <meta name="author" content="Carteiro Digital">
   <title>Carteiro Digital | Rastreio de encomendas pelo Telegram</title>
+  <link rel="canonical" href="https://carteirodigital.com" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles/style.css" />
@@ -14,10 +39,10 @@
 
 <body>
   <header class="navbar fixed-top bg-white shadow-sm">
-    <section class="container navbar-container">
+    <section class="container navbar-container d-flex justify-content-center">
       <div class="row no-gutters navbar-content">
         <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
+          <div class="container-fluid px-0">
             <a class="navbar-brand text-primary" href="index.html">
               <img src="images/logo-carteiro-digital.svg" alt="Carteiro Digital Logo" width="30" height="30"
                 class="navbar-logo-img">
@@ -97,11 +122,12 @@
               <div class="d-flex justify-content-center align-items-center">
                 <div class="input-group shadow tracking-form">
                   <input type="text" class="form-control tracking-input" placeholder="Código de rastreio"
-                    aria-label="Código de rastreio" aria-describedby="button-addon3"/>
+                    aria-label="Código de rastreio" aria-describedby="button-addon3" />
                   <button class="btn btn-secondary btn-lg tracking-button" type="button" id="frontTrackingButton">
                     Rastrear
                   </button>
-                  <button class="d-none" type="button" id="backTrackingButton" data-bs-target="#trackingModal" data-bs-toggle="modal"></button>
+                  <button class="d-none" type="button" id="backTrackingButton" data-bs-target="#trackingModal"
+                    data-bs-toggle="modal"></button>
                   <div class="invalid-code position-absolute text-warning fw-bold">
                     Código inválido ou ainda não encontrado na base de dados dos Correios do Brasil.
                   </div>
@@ -113,7 +139,8 @@
                 <div
                   class="bg-light tracking-numbers-text text-center d-flex justify-content-center align-items-center shadow">
                   <p class="text-primary m-0">
-                    Já foram rastreadas <span class="fw-bold tracking-numbers"></span><span class="fw-bold"> encomendas</span> com o Carteiro Digital
+                    Já foram rastreadas <span class="fw-bold tracking-numbers"></span><span class="fw-bold">
+                      encomendas</span> com o Carteiro Digital
                   </p>
                 </div>
               </div>
@@ -323,8 +350,8 @@
       <div class="modal-content">
         <form>
           <div class="modal-header">
-            <h5 class="modal-title text-primary" id="contactModalLabel">carteiro<span
-              class="fw-bold">digital</span> - Entre em contato</h5>
+            <h5 class="modal-title text-primary" id="contactModalLabel">carteiro<span class="fw-bold">digital</span> -
+              Entre em contato</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -338,8 +365,7 @@
             </div>
             <div class="mb-3">
               <label for="contact-form-message" class="form-label">Mensagem</label>
-              <textarea type="password" class="form-control" id="contact-form-message"
-                maxlength="500"></textarea>
+              <textarea type="password" class="form-control" id="contact-form-message" maxlength="500"></textarea>
             </div>
           </div>
           <div class="modal-footer">
@@ -382,7 +408,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <a href="https://t.me/carteirodigital_bot" target="_blank" class="btn btn-primary" id="tracking-form-button">Quero
+            <a href="https://t.me/carteirodigital_bot" target="_blank" class="btn btn-primary"
+              id="tracking-form-button">Quero
               ser notificado no Telegram</a>
           </div>
         </form>
@@ -397,4 +424,5 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="src/index.js" type="module"></script>
 </body>
+
 </html>

@@ -142,6 +142,7 @@ h2 {
 /* MEDIA QUERIES */
 
 @media (max-width: 1024px) {
+
   /*HEADER*/
   .navbar-container {
     display: flex !important;
@@ -187,16 +188,10 @@ h2 {
 }
 
 @media (max-width: 991px) {
+
   /*HEADER*/
   .navbar-logo-text {
     display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  /*HOME*/
-  .home-main-button-col {
-    width: 75%;
   }
 
   /*TRACKING*/
@@ -204,9 +199,28 @@ h2 {
     bottom: -1.75rem;
     font-size: 1rem;
   }
+}
+
+@media (min-width: 886px) and (max-width: 991px) {
+  .tracking-container {
+    min-height: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /*HOME*/
+  .home-main-button-col {
+    width: 75%;
+  }
+
+  /*TRACKING*/
+  .invalid-code {
+    bottom: -2.5rem;
+  }
 
   .tracking-container {
-    min-height: 15rem;
+    min-height: 20rem;
   }
 
   /*FAQ*/
@@ -225,6 +239,7 @@ h2 {
 }
 
 @media (max-width: 576px) {
+
   /*HOME*/
   .home-img,
   .faq-img {
@@ -233,6 +248,7 @@ h2 {
 }
 
 @media (max-width: 425px) {
+
   /*HOME*/
   .home-main-title {
     font-size: 2rem;
@@ -254,7 +270,7 @@ h2 {
 
   .invalid-code {
     bottom: -2rem;
-    font-size: 0.6rem
+    font-size: 0.6rem;
   }
 
   .tracking-input-group {
@@ -262,7 +278,14 @@ h2 {
   }
 }
 
+@media (max-width: 395px) {
+  .tracking-container {
+    min-height: 20rem;
+  }
+}
+
 @media (max-width: 375px) {
+
   /*HOME*/
   .home-main-button-col {
     padding: 1.875rem 0 0 0;
@@ -287,6 +310,7 @@ h2 {
 }
 
 @media (max-width: 320px) {
+
   /*HOME*/
   .home-main-title {
     font-size: 2rem;
