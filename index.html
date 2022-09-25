@@ -266,8 +266,8 @@
                   data-bs-parent="#accordion-group">
                   <div class="accordion-body text-secondary">
                     É possível desativar as notificações do <span class="fw-semibold">Carteiro Digital</span> a qualquer
-                    momento. Basta digitar o comando <span class="fw-semibold">/stop</span> no chat do Telegram. Quando
-                    uma encomenda sua for entregue, você também não receberá mais notificações sobre ela.
+                    momento. Para isso, basta digitar o comando <span class="fw-semibold">/silenciar</span> no chat do Telegram e <span class="fw-semibold">/notificar</span> para voltar a receber notificações. Quando
+                    uma encomenda sua for entregue, você também não receberá mais notificações sobre ela. 
                   </div>
                 </div>
               </div>
@@ -286,7 +286,7 @@
                       Digital</span>. Os únicos dados que serão coletados são o seu <span class="fst-italic">nome</span>
                     e <span class="fst-italic">usuário do Telegram</span>, para receber mensagens personalizadas, e os
                     <span class="fst-italic">códigos de rastreio</span> das encomendas que você informar. Ao rastrear
-                    suas encomendas, você estará concordando com os nossos <a href="politica-privacidade"
+                    suas encomendas, você estará concordando com os nossos <a href="./politica-privacidade.html"
                       class="text-primary fw-semibold">Termos de Uso e Política de Privacidade</a>.
                   </div>
                   <div class="accordion-body text-secondary">
@@ -325,8 +325,8 @@
                   data-bs-parent="#accordion-group">
                   <div class="accordion-body text-secondary">
                     Sim, você pode utilizar a API de rastreamento do <span class="fw-semibold">Carteiro Digital</span>
-                    para rastrear suas encomendas. Para mais informações, acesse a <a href="#api"
-                      class="text-primary fw-semibold">documentação da API</a>.
+                    para rastrear suas encomendas. Para mais informações, acesse a <a
+                      class="text-primary fw-semibold">documentação da API</a> (em breve).
                   </div>
                 </div>
               </div>
@@ -372,7 +372,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-primary" id="contact-form-button">Enviar</button>
+            <button type="submit" class="btn btn-primary" id="contact-form-button" disabled>Funcionalidade disponível em breve!</button>
           </div>
         </form>
       </div>
@@ -396,6 +396,10 @@
             <div class="mb-3">
               <label for="tracking-form-status" class="form-label">Status</label>
               <input type="text" class="form-control" id="tracking-form-status" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="tracking-form-type" class="form-label">Tipo</label>
+              <input type="text" class="form-control" id="tracking-form-type" disabled>
             </div>
             <div class="mb-3">
               <label for="tracking-form-local" class="form-label">Local</label>
