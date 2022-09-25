@@ -233,6 +233,37 @@
           </section>
     </main>
 
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <form id="contact-form">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary" id="contactModalLabel">carteiro<span class="fw-bold">digital</span> -
+                Entre em contato</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="contact-form-name" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="contact-form-name" maxlength="100" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-form-email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="contact-form-email" maxlength="100" required>
+              </div>
+              <div class="mb-3">
+                <label for="contact-form-message" class="form-label">Mensagem</label>
+                <textarea type="password" class="form-control" id="contact-form-message" maxlength="500"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" id="contact-form-submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <footer class="bg-primary">
       <div class="container">
         <div class="row">
