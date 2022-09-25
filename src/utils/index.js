@@ -3,6 +3,7 @@ import { toggleNavbar } from "./toggleNavbar.js";
 import { updateFooterYear } from "./updateFooterYear.js";
 import { updateTrackingsNumber } from "./updateTrackingsNumber.js";
 import { trackOrder } from "./trackOrder.js";
+import { sendContactForm } from "./sendContactForm.js";
 
 export {
   scrollAnimation,
@@ -10,4 +11,5 @@ export {
   updateFooterYear,
   updateTrackingsNumber,
   trackOrder,
+  sendContactForm,
 };

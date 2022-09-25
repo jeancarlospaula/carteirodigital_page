@@ -4,6 +4,7 @@ import {
   updateFooterYear,
   updateTrackingsNumber,
   trackOrder,
+  sendContactForm,
 } from "./utils/index.js";
 
 const start = async () => {
@@ -12,6 +13,7 @@ const start = async () => {
   toggleNavbar();
   scrollAnimation();
   trackOrder();
+  sendContactForm();
 };
 
 start();
