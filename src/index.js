@@ -8,6 +8,7 @@ import {
 } from "./utils/index.js";
 
 const trackingNumbersText = document.querySelector(".tracking-numbers-text p");
+const trackingContainer = document.querySelector(".tracking-container");
 
 const start = async () => {
   const ua = navigator.userAgent || navigator.vendor || window.opera;
@@ -15,6 +16,7 @@ const start = async () => {
 
   if (isInstagram) {
     trackingNumbersText.style.fontSize = "0.9rem";
+    trackingContainer.style.minHeight = "20rem";
   }
 
   updateFooterYear();
