@@ -62,11 +62,11 @@ const getAddressMessage = (address) => {
   let message = "";
 
   if (address.city) {
-    message = address.city;
+    message = address.city + " - ";
   }
 
   if (address.state) {
-    message += ` - ${address.state}`;
+    message += address.state;
   }
 
   if (address.type) {
